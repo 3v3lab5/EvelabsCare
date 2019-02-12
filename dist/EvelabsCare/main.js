@@ -4668,7 +4668,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var SocketService = /** @class */ (function () {
     function SocketService() {
-        this.socket = socket_io_client__WEBPACK_IMPORTED_MODULE_2__('http://localhost:4000');
+        this.socket = socket_io_client__WEBPACK_IMPORTED_MODULE_2__('http://173.230.145.245:4000');
     }
     // EMITTER
     SocketService.prototype.sendMessage = function (topic, msg) {
