@@ -6,8 +6,8 @@
  		      *ngFor="let task of activeTasks"
  		      [colspan]="1"
  		      [rowspan]="1" >
-				<mat-card fxLayout="column" style="height: 100%;width: 100%;padding: 0px;"(click)="openTaskActivity(task)" matTooltip="Click to delete task">
-					<div fxFlex="10" style="background-color: #616161" fxLayout="row">
+				<mat-card fxLayout="column" style="height: 100%;width: 100%;padding: 0px;" matTooltip="Click to delete task">
+					<div fxFlex="10" style="background-color: #616161" fxLayout="row" (click)="openTaskActivity(task)">
 						<div fxFlex="15"></div>
 						<div fxFlex="15">
 							<mat-icon style="color: white;">network_wifi</mat-icon>
@@ -18,23 +18,20 @@
 						</div>
 						<div fxFlex="15" style="font-size: 14px;color: white;">{{task.deviceCharge}}%</div>
 					</div>
-					<div fxFlex="20" fxLayout="row" fxLayoutAlign="center center" style="height: 100%;width: 100%" style="background-color: #212121;color: white;">
+					<div fxFlex="20" fxLayout="row" fxLayoutAlign="center center" style="height: 100%;width: 100%" style="background-color: #212121;color: white;" (click)="openTaskActivity(task)">
 						<h3 fxFlex="30">{{task._bed.bedName}}</h3>
 					</div>
-					<div fxFlex>
+					<div fxFlex (click)="openTaskActivity(task)">
 						<mat-progress-bar [value]="task.percentage"></mat-progress-bar>
 					</div>
-					<div fxFlex="50" style="background-color: #616161;height: 100%;width: 100%">
+					<div fxFlex="50" style="background-color: #616161;height: 100%;width: 100%" (click)="openTaskActivity(task)">
 						<ngx-slick  class="carousel" #slickModal="slick-modal" [config]="slideConfig" style="height: 100%;width: 100%;" >
-							<div fxLayout="column" ngxSlickItem class="slide" style="height: 100%;width: 100%;" [ngStyle]="{background: 'url(../../assets/images/timeline.png) no-repeat 0 0'}">
-								<div fxFlex="10">
-									<div fxFlex="25"><mat-icon>info</mat-icon></div>
-									<div fxFlex="75"></div>
-								</div>
-								<div style="color: #EEEEEE;">Rate</div>
-								<div fxFlex="80" fxLayout="row" fxLayoutAlign="center center" style="height: 100%;width: 100%;">
+							<div fxLayout="column" ngxSlickItem class="slide" style="height: 100%;width: 100%;">
+								<div fxFlex="10"></div>
+								<div style="color: #EEEEEE;padding-top: 10px;padding-left: 8px;">Rate</div>
+								<div fxFlex="80" fxLayout="row" fxLayoutAlign="center center" style="height: 100%;width: 100%;padding-top: 5px;">
 									<div fxFlex="70"  style="color: white;">
-										<h1 style="padding: 0px;margin:0px;">{{task.rate}} / {{task._medication.medicineRate}}</h1>
+										<div style="padding: 0px;margin:0px;font-size: 40px">{{task.rate}} / {{task._medication.medicineRate}}</div>
 									</div>
 								</div>
 								<div fxFlex="10" style="color: white;">
@@ -42,45 +39,33 @@
 									<div fxFlex="25">ml/hr</div>
 								</div>
 							</div>
-							<div fxLayout="column" ngxSlickItem class="slide" style="height: 100%;width: 100%;" [ngStyle]="{background: 'url(../../assets/images/alarm.png) no-repeat 0 0'}">
-								<div fxFlex="40">
-									<div fxFlex="25"><mat-icon>info</mat-icon></div>
-									<div fxFlex="75"></div>
-								</div>
-								<div style="color: #EEEEEE;">Remaining Time</div>
-								<div fxFlex="60" fxLayout="row" fxLayoutAlign="center center" style="height: 100%;width: 100%;" style="color: white;">
-									<div fxFlex="25">
-										<h1 style="padding: 0px;margin:0px;">{{task.timeRemaining /60 | number:'1.0-0'}} </h1> 
+							<div fxLayout="column" ngxSlickItem class="slide" style="height: 100%;width: 100%;">
+								<div fxFlex="10"></div>
+								<div style="color: #EEEEEE;padding-top: 10px;padding-left: 8px;">Remaining Time</div>
+								<div fxFlex="80" fxLayout="row" fxLayoutAlign="center center" style="height: 100%;width: 100%;padding-top: 30px;" style="color: white;">
+									<div style="margin:0px;font-size: 40px;padding-left: 8px;">{{task.timeRemaining /60 | number:'1.0-0'}}  
 									</div>
-									<div fxFlex="25">
-										Hrs
+									<div style="padding-left: 10px;padding-top: 7px;">Hrs</div>
+									<div style="padding: 0px;margin:0px;font-size: 40px">{{task.timeRemaining%60}} 
 									</div>
-									<div fxFlex="25">
-										<h1 style="padding: 0px;margin:0px;">{{task.timeRemaining%60}} </h1> 
-									</div>
-									<div fxFlex="25">
-										Mins
-									</div>
+									<div style="padding-left: 10px;padding-top: 7px;">Mins</div>
 								</div>
 								<div fxFlex="10" style="color: white;">
-									<div fxFlex="60"></div>
-									<div fxFlex="40">Approx</div>
+									<div fxFlex="70"></div>
+									<div fxFlex="30">Approx</div>
 								</div>
 							</div>
-							<div fxLayout="column" ngxSlickItem class="slide" style="height: 100%;width: 100%;" [ngStyle]="{background: 'url(../../assets/images/opacity.png) no-repeat 0 0'}">
-								<div fxFlex="10">
-									<div fxFlex="25"><mat-icon>info</mat-icon></div>
-									<div fxFlex="75"></div>
-								</div>
-								<div style="color: #EEEEEE;">Volume</div>
+							<div fxLayout="column" ngxSlickItem class="slide" style="height: 100%;width: 100%;">
+								<div fxFlex="10"></div>
+								<div style="color: #EEEEEE;padding-top: 10px;padding-left: 8px;">Volume</div>
 								<div fxFlex="80" fxLayout="row" fxLayoutAlign="center center" style="height: 100%;width: 100%;">
 									<div fxFlex="70" style="color: white;">
-										<h1 style="padding: 0px;margin:0px;">{{task.infusedVolume}} / {{task._medication.medicineVolume}}</h1>
+										<div style="padding: 0px;margin:0px;font-size: 40px;padding-top: 5px;">{{task.infusedVolume}} / {{task._medication.medicineVolume}}</div>
 									</div>
 								</div>
 								<div fxFlex="10" style="color: white;">
-									<div fxFlex="75"></div>
-									<div fxFlex="25">ml</div>
+									<div fxFlex="85"></div>
+									<div fxFlex="15">ml</div>
 								</div>
 							</div>
 						</ngx-slick>
@@ -106,7 +91,7 @@
  				</mat-card> 
  			</div>
  		</mat-card>
- 		<mat-card fxFlex="50" class="scrollable" style="padding: 3px">
+ 		<mat-card fxFlex="50" class="scrollable" style="padding: 3px"  *ngIf="upcomingTaskFlag">
  			<b *ngIf="upcomingTaskFlag" style="color: #616161;">Upcoming Tasks</b>
  			<div fxLayout="column" style="padding-bottom: 3px;" *ngFor="let upcomingTask of upcomingTasks" (click)="openTaskActivity(upcomingTask)">
 				<mat-card fxLayout="row" style="padding: 0px;" matTooltip="Click to delete task">
