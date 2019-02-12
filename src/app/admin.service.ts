@@ -7,11 +7,11 @@ import {Router} from '@angular/router';
 })
 export class AdminService {
 
-	private manageUserUrl = 'http://localhost:4000/api/admin/user'
-  private manageStationUrl = 'http://localhost:4000/api/admin/station'
-  private manageBedUrl = 'http://localhost:4000/api/admin/bed'
-  private manageIvsetUrl = 'http://localhost:4000/api/admin/ivset'
-  private manageDripoUrl = 'http://localhost:4000/api/admin/dripo'
+	private manageUserUrl = 'http://45.79.94.153:4000/api/admin/user'
+  private manageStationUrl = 'http://45.79.94.153:4000/api/admin/station'
+  private manageBedUrl = 'http://45.79.94.153:4000/api/admin/bed'
+  private manageIvsetUrl = 'http://45.79.94.153:4000/api/admin/ivset'
+  private manageDripoUrl = 'http://45.79.94.153:4000/api/admin/dripo'
   	constructor(private http:HttpClient,private router:Router) { }
   	createUser(userData){
   		return this.http.post<any>(this.manageUserUrl,userData)

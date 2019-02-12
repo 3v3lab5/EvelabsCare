@@ -1270,11 +1270,11 @@ var AdminService = /** @class */ (function () {
     function AdminService(http, router) {
         this.http = http;
         this.router = router;
-        this.manageUserUrl = 'http://localhost:4000/api/admin/user';
-        this.manageStationUrl = 'http://localhost:4000/api/admin/station';
-        this.manageBedUrl = 'http://localhost:4000/api/admin/bed';
-        this.manageIvsetUrl = 'http://localhost:4000/api/admin/ivset';
-        this.manageDripoUrl = 'http://localhost:4000/api/admin/dripo';
+        this.manageUserUrl = 'http://45.79.94.153:4000/api/admin/user';
+        this.manageStationUrl = 'http://45.79.94.153:4000/api/admin/station';
+        this.manageBedUrl = 'http://45.79.94.153:4000/api/admin/bed';
+        this.manageIvsetUrl = 'http://45.79.94.153:4000/api/admin/ivset';
+        this.manageDripoUrl = 'http://45.79.94.153:4000/api/admin/dripo';
     }
     AdminService.prototype.createUser = function (userData) {
         return this.http.post(this.manageUserUrl, userData);
@@ -1941,11 +1941,11 @@ var AuthService = /** @class */ (function () {
     function AuthService(http, router) {
         this.http = http;
         this.router = router;
-        this.registerUrl = "http://localhost:4000/api/register";
-        this.loginUrl = "http://localhost:4000/api/login";
-        this.activateAccountUrl = "http://localhost:4000/api/activate";
-        this.forgotPasswordUrl = "http://localhost:4000/api/forgotpassword";
-        this.resetPasswordUrl = "http://localhost:4000/api/resetpassword";
+        this.registerUrl = "http://45.79.94.153:4000/api/register";
+        this.loginUrl = "http://45.79.94.153:4000/api/login";
+        this.activateAccountUrl = "http://45.79.94.153:4000/api/activate";
+        this.forgotPasswordUrl = "http://45.79.94.153:4000/api/forgotpassword";
+        this.resetPasswordUrl = "http://45.79.94.153:4000/api/resetpassword";
         this.jwtHelper = new _auth0_angular_jwt__WEBPACK_IMPORTED_MODULE_3__["JwtHelperService"]();
         this.nullArray = [{}];
         this.adminMenuItems = [{ menu: 'Home', icon: 'home', href: '/admin/home' },
@@ -4155,17 +4155,17 @@ var NurseService = /** @class */ (function () {
     function NurseService(http, router) {
         this.http = http;
         this.router = router;
-        this.getStationsUrl = 'http://localhost:4000/api/nurse/station';
-        this.setStationUrl = 'http://localhost:4000/api/nurse/setstation';
-        this.getBedsUrl = 'http://localhost:4000/api/nurse/bed';
-        this.getDoctorsUrl = 'http://localhost:4000/api/nurse/doctor';
-        this.managePatientUrl = 'http://localhost:4000/api/nurse/patient';
-        this.getOccupiedBedsUrl = 'http://localhost:4000/api/nurse/occupiedbed';
-        this.manageTaskUrl = 'http://localhost:4000/api/nurse/task';
-        this.getUpcomingTaskUrl = 'http://localhost:4000/api/nurse/upcomingtask';
-        this.getDelayedTaskUrl = 'http://localhost:4000/api/nurse/delayedtask';
-        this.getActiveTaskUrl = 'http://localhost:4000/api/nurse/activetask';
-        this.getPhistoryUrl = 'http://localhost:4000/api/nurse/patienthistory';
+        this.getStationsUrl = 'http://45.79.94.153:4000/api/nurse/station';
+        this.setStationUrl = 'http://45.79.94.153:4000/api/nurse/setstation';
+        this.getBedsUrl = 'http://45.79.94.153:4000/api/nurse/bed';
+        this.getDoctorsUrl = 'http://45.79.94.153:4000/api/nurse/doctor';
+        this.managePatientUrl = 'http://45.79.94.153:4000/api/nurse/patient';
+        this.getOccupiedBedsUrl = 'http://45.79.94.153:4000/api/nurse/occupiedbed';
+        this.manageTaskUrl = 'http://45.79.94.153:4000/api/nurse/task';
+        this.getUpcomingTaskUrl = 'http://45.79.94.153:4000/api/nurse/upcomingtask';
+        this.getDelayedTaskUrl = 'http://45.79.94.153:4000/api/nurse/delayedtask';
+        this.getActiveTaskUrl = 'http://45.79.94.153:4000/api/nurse/activetask';
+        this.getPhistoryUrl = 'http://45.79.94.153:4000/api/nurse/patienthistory';
     }
     NurseService.prototype.readStation = function () {
         return this.http.get(this.getStationsUrl);
@@ -5017,7 +5017,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/ksumsb3pro37/EvelabsCare/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/ksumsb3pro37/Desktop/EvelabsCare/src/main.ts */"./src/main.ts");
 
 
 /***/ }),

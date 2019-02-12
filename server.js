@@ -2,8 +2,8 @@
 var express = require('express');
 var app = express(); 
 const path = require('path');
-var rootPath = path.normalize(__dirname + '/dist/Evelabscare');
-var port = process.env.PORT || 8080; 
+var rootPath = path.normalize(__dirname + '/dist/EvelabsCare');
+var port = process.env.PORT || 80; 
 app.use(express.static(rootPath)); 
 app.get('*', (req, res) => {
   res.sendFile(rootPath + '/index.html');

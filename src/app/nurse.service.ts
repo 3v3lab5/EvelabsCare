@@ -6,17 +6,17 @@ import {Router} from '@angular/router';
   providedIn: 'root'
 })
 export class NurseService {
-	private getStationsUrl = 'http://localhost:4000/api/nurse/station'
-	private setStationUrl = 'http://localhost:4000/api/nurse/setstation'
-	private getBedsUrl = 'http://localhost:4000/api/nurse/bed'
-	private getDoctorsUrl = 'http://localhost:4000/api/nurse/doctor'
-	private managePatientUrl = 'http://localhost:4000/api/nurse/patient'
-	private getOccupiedBedsUrl = 'http://localhost:4000/api/nurse/occupiedbed'
-	private manageTaskUrl = 'http://localhost:4000/api/nurse/task'
-	private getUpcomingTaskUrl = 'http://localhost:4000/api/nurse/upcomingtask'
-	private getDelayedTaskUrl = 'http://localhost:4000/api/nurse/delayedtask'
-	private getActiveTaskUrl = 'http://localhost:4000/api/nurse/activetask'
-	private getPhistoryUrl = 'http://localhost:4000/api/nurse/patienthistory'
+	private getStationsUrl = 'http://45.79.94.153:4000/api/nurse/station'
+	private setStationUrl = 'http://45.79.94.153:4000/api/nurse/setstation'
+	private getBedsUrl = 'http://45.79.94.153:4000/api/nurse/bed'
+	private getDoctorsUrl = 'http://45.79.94.153:4000/api/nurse/doctor'
+	private managePatientUrl = 'http://45.79.94.153:4000/api/nurse/patient'
+	private getOccupiedBedsUrl = 'http://45.79.94.153:4000/api/nurse/occupiedbed'
+	private manageTaskUrl = 'http://45.79.94.153:4000/api/nurse/task'
+	private getUpcomingTaskUrl = 'http://45.79.94.153:4000/api/nurse/upcomingtask'
+	private getDelayedTaskUrl = 'http://45.79.94.153:4000/api/nurse/delayedtask'
+	private getActiveTaskUrl = 'http://45.79.94.153:4000/api/nurse/activetask'
+	private getPhistoryUrl = 'http://45.79.94.153:4000/api/nurse/patienthistory'
 
 
 	constructor(private http:HttpClient,private router:Router) { }
