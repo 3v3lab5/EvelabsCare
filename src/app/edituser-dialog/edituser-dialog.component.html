@@ -1,6 +1,6 @@
 <h2 mat-dialog-title>Change password</h2>
 <mat-dialog-content>
-	<form [formGroup]="changePasswordForm" (ngSubmit)="onSubmit(changePasswordForm)" >
+	<form [formGroup]="changePasswordForm" (ngSubmit)="onSubmit()" >
 		<div class="Form-container">
 			<mat-form-field>
 		    	<input matInput placeholder="Enter a password" type="password" formControlName="password">

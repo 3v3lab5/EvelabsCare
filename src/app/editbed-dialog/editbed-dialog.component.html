@@ -1,6 +1,6 @@
 <h2 mat-dialog-title>Edit Bed</h2>
 <mat-dialog-content>
-	<form [formGroup]="editBedForm" (ngSubmit)="onSubmit(editBedForm)" >
+	<form [formGroup]="editBedForm" (ngSubmit)="onSubmit()" >
 		<div class="form-container">
 			<mat-form-field>
 		    	<input matInput placeholder="Enter bed name" type="text" formControlName="bedName">

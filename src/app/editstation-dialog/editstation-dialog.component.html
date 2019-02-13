@@ -1,6 +1,6 @@
 <h2 mat-dialog-title>Edit Station</h2>
 <mat-dialog-content>
-	<form [formGroup]="editStationForm" (ngSubmit)="onSubmit(editStationForm)" >
+	<form [formGroup]="editStationForm" (ngSubmit)="onSubmit()" >
 		<div class="form-container">
 			<mat-form-field>
 		    	<input matInput placeholder="Enter station name" type="text" formControlName="stationName">

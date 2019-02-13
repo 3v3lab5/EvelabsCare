@@ -194,6 +194,23 @@ export class NurseMpatientComponent implements OnInit {
   	          			    console.log(err);
   	          			}
   	          	)
+
+                  this.nurse.readBed()
+                        .subscribe(
+                          res => {
+                                 if(res.success){
+                                  this.beds = res.data;
+                                  }
+                                 else{
+                                   this.snackbar.open(res.message, 'close')
+                                 }
+                                 },
+                             err => {
+                                   console.log(err);
+                             }
+
+                        )
+
   	          }
   	        });
   	}

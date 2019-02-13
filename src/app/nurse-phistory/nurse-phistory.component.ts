@@ -13,7 +13,9 @@ import { MatSnackBar } from '@angular/material';
   styleUrls: ['./nurse-phistory.component.css']
 })
 export class NursePhistoryComponent implements OnInit {
-	history: Array<any>=[];
+	history={patientName:'',patientAge:'',patientWeight:'',patientGender:'',patientStatus:'',
+    admittedOn:'',dischargedOn:'',_medication:''
+  };
   constructor(private route: ActivatedRoute,public snackbar: MatSnackBar,
   private router: Router,private nurse: NurseService) { }
 

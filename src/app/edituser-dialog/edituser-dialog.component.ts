@@ -20,7 +20,7 @@ export class EdituserDialogComponent implements OnInit {
 	editUserData={'_id':''};
   constructor(private fb: FormBuilder,private admin: AdminService,public snackbar: MatSnackBar,
         private dialogRef: MatDialogRef<EdituserDialogComponent>,
-        @Inject(MAT_DIALOG_DATA) data) {
+           @Inject(MAT_DIALOG_DATA) public data: any) {
   			this.editUserId = data;
   			this.changePasswordForm = this.fb.group({
   			password:['',Validators.compose([Validators.required,Validators.minLength(5)])],
