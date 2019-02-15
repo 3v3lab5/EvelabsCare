@@ -13,11 +13,11 @@ export class AuthService {
   public hospitalName;
   public stationName;
   public permission;
-	private registerUrl = "http://173.230.145.245:4000/api/register";
-	private loginUrl = "http://173.230.145.245:4000/api/login";
-  private activateAccountUrl  = "http://173.230.145.245:4000/api/activate";
-  private forgotPasswordUrl = "http://173.230.145.245:4000/api/forgotpassword";
-  private resetPasswordUrl = "http://173.230.145.245:4000/api/resetpassword";
+	private registerUrl = "http://74.207.227.41:4000/api/register";
+	private loginUrl = "http://74.207.227.41:4000/api/login";
+  private activateAccountUrl  = "http://74.207.227.41:4000/api/activate";
+  private forgotPasswordUrl = "http://74.207.227.41:4000/api/forgotpassword";
+  private resetPasswordUrl = "http://74.207.227.41:4000/api/resetpassword";
 
   	constructor(private http:HttpClient,
                 private router:Router) { }
